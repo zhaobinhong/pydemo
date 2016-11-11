@@ -16,8 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from app import views
+from app.views import bowen
 
 urlpatterns = [
-    url(r"^$",views.index),
-    url(r'^admin/', admin.site.urls),
+    url(r"^$", views.index,name='index'),
+    url(r'^admin/', admin.site.urls,name='admin'),
+    url(r'^bowen/$', views.bowen,name='bowen'),
+    url(r'^jineng/$', views.jineng,name='jineng'),
+    url(r'^(?P<id>\d+)/$', views.detail, name='detail'),
+    url(r'^home/$', views.home,name='home')
+
 ]

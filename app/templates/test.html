@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博文</title>
+    <link href="http://10.7.7.163:9000/jianli/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <style type="text/css">
+        .post {
+            background: #fff;
+            opacity: .5;
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .post-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin: 10px 0px;
+        }
+
+        .post-meta {
+            padding: 1em 0;
+        }
+
+        .post-meta a {
+            padding: 0 2em;
+        }
+    </style>
+</head>
+<body>
+<h1 style="font-size: 50px;text-align: center;color: aqua">我的博文</h1>
+<strong style="color: orangered;">访问时间：{{ current_time }}</strong>
+
+<br>
+<br>
+<form class="pure-form" action="/search/" method="get" style="display: block;margin: 0 auto;width: 244px">
+    <input style="height: 33px" class="pure-input-3-3" type="text" name="s" placeholder="search">
+    <button class="btn btn-default" type="submit">搜索</button>
+</form>
+
+
+<div class="posts">
+
+
+    {% block content %}
+
+    {% endblock %}
+
+</div>
+<button class="btn btn-default" style="position: absolute;top: 3em;right: 3em"><a href="/">主页</a></button>
+</body>
+</html>

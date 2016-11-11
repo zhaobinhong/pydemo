@@ -72,6 +72,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'pub_demo.wsgi.application'
 
 
+# template dir
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates').replace("\\", ' /'),
+)
+
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
